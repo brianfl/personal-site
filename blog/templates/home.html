@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -7,11 +8,22 @@
 
   <title>brianfl.com</title>
 
-  <link rel="stylesheet" href="templates/home.css">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 </head>
 
 <body>
-    <p>Hello</p>
+	<div id="left-side">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Portrait_of_a_Man_in_a_Turban_%28Jan_van_Eyck%29_with_frame.jpg/1280px-Portrait_of_a_Man_in_a_Turban_%28Jan_van_Eyck%29_with_frame.jpg" height=100px>
+	</div>
+	<div id="right-side">
+		<h3>Brian Flaherty's website</h3>
+		<p>This is a personal website where I will share the amount of work I do each day. The aim is to make myself more disciplined by being held publicly accountable.</p>
+		<a href="https://github.com/brianfl">Github</a>
+		<p> Recommended reading to pair with this project: 'So Good They Can't Ignore You' and 'Deep Work', both by Cal Newport.</p>
+	</div>
+
+	<h5>February 25 2022, 6:01PM</h5>
+	<p>5 hours and 10 minutes of good work today. Built this site with Django, Nginx, and Gunicorn hosted on Digital Ocean. Relearning a lot of website management on Linux. Still need to do a lot of styling, work on the Sqlite database, and add an easier method for adding daily posts.</p>
 </body>
 </html>
