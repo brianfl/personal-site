@@ -7,23 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>brianfl.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 </head>
 
 <body>
-	<div id="left-side">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Portrait_of_a_Man_in_a_Turban_%28Jan_van_Eyck%29_with_frame.jpg/1280px-Portrait_of_a_Man_in_a_Turban_%28Jan_van_Eyck%29_with_frame.jpg" height=100px>
-	</div>
+	<div id="top-wrapper">
+	<div id="top">
+	<div id="left-side"></div>
 	<div id="right-side">
-		<h3>Brian Flaherty's website</h3>
+		<h3>Brian's Website</h3>
 		<p>This is a personal website where I will share the amount of work I do each day. The aim is to make myself more disciplined by being held publicly accountable.</p>
 		<a href="https://github.com/brianfl">Github</a>
 		<p> Recommended reading to pair with this project: 'So Good They Can't Ignore You' and 'Deep Work', both by Cal Newport.</p>
 	</div>
+	</div>
+	</div>
 
-	<h5>February 25 2022, 6:01PM</h5>
-	<p>5 hours and 10 minutes of good work today. Built this site with Django, Nginx, and Gunicorn hosted on Digital Ocean. Relearning a lot of website management on Linux. Still need to do a lot of styling, work on the Sqlite database, and add an easier method for adding daily posts.</p>
+	<div id='content-block'>
+		{% for post in post_list %}
+			<hr size="2" width="100%" color="black">
+			<h4> {{ post.post_time }}</h4>
+			<p>{{ post.readable_work }} of work. {{ post.post_content }} </p>
+		{% endfor %}
+	</div>
 </body>
 </html>
