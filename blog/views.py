@@ -18,3 +18,6 @@ def index(request):
         post_list_human_readable.append(new_post)
 
     return render(request, 'home.html', {'post_list':post_list_human_readable})
+
+def chess(request):
+    return render(request, 'chess.html')

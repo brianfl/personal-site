@@ -1,0 +1,44 @@
+body {
+	background-color: #ffffea;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#chess-board{
+	background-color:green;
+	display:flex;
+	height:500px;
+	width:500px;
+	flex-wrap:wrap;
+}
+
+.white{
+	background-color:white;
+	height:12.5%;
+	width:12.5%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.black{
+	background-color:grey;
+	height:12.5%;
+	width:12.5%;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.piece{
+	background-color:none;
+	font-size: 250%;
+	height:100%;
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.selected{
+	background-color:yellow;
+}
